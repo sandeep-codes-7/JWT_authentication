@@ -2,12 +2,12 @@ from passlib.context import CryptContext
 from jose import jwt,JWTError
 from datetime import datetime, timedelta
 
-SECRET = "alsjhdljakflkaldfahldfjkajlsdafk"
+SECRET = "akjlfdhjkfaiefbcla;fh;ads;ifa;ihfs;aihdf;jknhueiafbvzb.zmv"
 ALGORITHM = "HS256"
 EXPIRY_TOKEN_TIME = 30
 
 
-pwd_context = CryptContext(schemes=["bcrypt"])
+pwd_context = CryptContext(schemes=["argon2"],deprecated='auto')
 
 def hashed_password(password: str):
     return pwd_context.hash(password)
